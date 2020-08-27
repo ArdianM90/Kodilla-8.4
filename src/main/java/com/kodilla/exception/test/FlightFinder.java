@@ -18,7 +18,7 @@ public class FlightFinder {
             if (destinations.get(flight.getArrivalAirport())) {
                 System.out.println("Flight has been found.");
             } else {
-                System.out.println("ERROR. Airport is not available.");
+                throw new RouteNotFoundException("ERROR. Airport is not available.");
             }
         } else {
             throw new RouteNotFoundException("ERROR. There is no such arrival airport.");
