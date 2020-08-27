@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class FlightFinder {
     public void findFlight(Flight flight) throws RouteNotFoundException {
-        Map<String, Boolean> destinations = new HashMap<String, Boolean>();
+        Map<String, Boolean> destinations = new HashMap<>();
         destinations.put("Warszawa", true);
         destinations.put("Kraków", true);
         destinations.put("Tokyo", false);
@@ -16,6 +16,5 @@ public class FlightFinder {
         } else {
             throw new RouteNotFoundException("There is no such arrival airport.");
         }
-        //System.out.println("ZNALAZLEM TO: =="+destinations.get(flight.getArrivalAirport())+"==");
     }
 }
